@@ -1,0 +1,50 @@
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\bin\Debug\netcoreapp3.1\appsettings.Development.json
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\bin\Debug\netcoreapp3.1\appsettings.json
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\bin\Debug\netcoreapp3.1\CMS Api-Raag.exe
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\bin\Debug\netcoreapp3.1\CMS Api-Raag.deps.json
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\bin\Debug\netcoreapp3.1\CMS Api-Raag.runtimeconfig.json
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\bin\Debug\netcoreapp3.1\CMS Api-Raag.runtimeconfig.dev.json
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\bin\Debug\netcoreapp3.1\CMS Api-Raag.dll
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\bin\Debug\netcoreapp3.1\CMS Api-Raag.pdb
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\bin\Debug\netcoreapp3.1\System.Web.Cors.dll
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\bin\Debug\netcoreapp3.1\System.Net.Http.Formatting.dll
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\bin\Debug\netcoreapp3.1\System.Web.Http.dll
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\bin\Debug\netcoreapp3.1\System.Web.Http.Cors.dll
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\bin\Debug\netcoreapp3.1\Microsoft.Data.SqlClient.dll
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.dll
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Abstractions.dll
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Design.dll
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.Relational.dll
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\bin\Debug\netcoreapp3.1\Microsoft.EntityFrameworkCore.SqlServer.dll
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\bin\Debug\netcoreapp3.1\Microsoft.Identity.Client.dll
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\bin\Debug\netcoreapp3.1\System.Configuration.ConfigurationManager.dll
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\bin\Debug\netcoreapp3.1\System.Runtime.Caching.dll
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\bin\Debug\netcoreapp3.1\System.Security.Cryptography.ProtectedData.dll
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\Microsoft.Data.SqlClient.dll
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\bin\Debug\netcoreapp3.1\runtimes\win-arm64\native\sni.dll
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\bin\Debug\netcoreapp3.1\runtimes\win-x64\native\sni.dll
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.0\System.Runtime.Caching.dll
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\bin\Debug\netcoreapp3.1\runtimes\win\lib\netstandard2.0\System.Security.Cryptography.ProtectedData.dll
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\obj\Debug\netcoreapp3.1\CMS Api-Raag.csproj.AssemblyReference.cache
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\obj\Debug\netcoreapp3.1\CMS Api-Raag.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\obj\Debug\netcoreapp3.1\CMS Api-Raag.AssemblyInfoInputs.cache
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\obj\Debug\netcoreapp3.1\CMS Api-Raag.AssemblyInfo.cs
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\obj\Debug\netcoreapp3.1\CMS Api-Raag.csproj.CoreCompileInputs.cache
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\obj\Debug\netcoreapp3.1\CMS Api-Raag.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\obj\Debug\netcoreapp3.1\staticwebassets\CMS Api-Raag.StaticWebAssets.Manifest.cache
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\obj\Debug\netcoreapp3.1\staticwebassets\CMS Api-Raag.StaticWebAssets.xml
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\obj\Debug\netcoreapp3.1\scopedcss\bundle\CMS Api-Raag.styles.css
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\obj\Debug\netcoreapp3.1\CMS Api-Raag.RazorTargetAssemblyInfo.cache
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\obj\Debug\netcoreapp3.1\CMS Api-Raag.csproj.CopyComplete
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\obj\Debug\netcoreapp3.1\CMS Api-Raag.dll
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\obj\Debug\netcoreapp3.1\CMS Api-Raag.pdb
+C:\Users\ganesh.a\source\repos\CMS Api-Raag\CMS Api-Raag\obj\Debug\netcoreapp3.1\CMS Api-Raag.genruntimeconfig.cache
