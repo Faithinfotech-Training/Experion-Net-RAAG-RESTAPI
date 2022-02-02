@@ -45,6 +45,9 @@ namespace CMS_Api_Raag
             services.AddScoped<IAppointmentRepository, AppointmentRepository>();
             services.AddScoped<ITokenRepository, TokenRepository>();
 
+            services.AddScoped<IPharmacistRepository, PharmacistRepository>();
+            services.AddScoped<ILabTechRepository, LabTechRepository>();
+
             //register JWT authentication schema
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
                 .AddJwtBearer(options =>
