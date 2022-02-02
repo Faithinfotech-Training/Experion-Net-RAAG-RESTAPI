@@ -1,11 +1,15 @@
+using CMS_Api_Raag.Models;
+using CMS_Api_Raag.Repository;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using Newtonsoft.Json.Serialization;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -26,6 +30,31 @@ namespace CMS_Api_Raag
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            // Connection string for DB injet as dependency
+            services.AddDbContext<CMSDBContext>(db =>
+            db.UseSqlServer(Configuration.GetConnectionString("CMSDBConnection")));
+
+
+            // add dependency injection of Pharmacist repo
+            services.AddScoped<IPharmacistRepository, PharmacistRepository>();
+            services.AddScoped<ILabTechRepository, LabTechRepository>();
+            
+
+            // adding services
+            services.AddControllers().AddNewtonsoftJson(
+                options => {
+                    options.SerializerSettings.ContractResolver = new DefaultContractResolver();
+                }
+                );
+
+            services
+                .AddControllers().AddNewtonsoftJson(
+                options => {
+                    options.SerializerSettings.ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore;
+                });
+
+
         }
 
 
