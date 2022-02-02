@@ -5230,19 +5230,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\risvana.sherin\\.nuget\\packages\\": {}
+    "C:\\Users\\ganesh.a\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\risvana.sherin\\Source\\Repos\\Experion-Net-RAAG-RESTAPI\\CMS Api-Raag\\CMS Api-Raag\\CMS Api-Raag.csproj",
+      "projectUniqueName": "C:\\Users\\ganesh.a\\Source\\Repos\\Experion-Net-RAAG-RESTAPI\\CMS Api-Raag\\CMS Api-Raag\\CMS Api-Raag.csproj",
       "projectName": "CMS Api-Raag",
-      "projectPath": "C:\\Users\\risvana.sherin\\Source\\Repos\\Experion-Net-RAAG-RESTAPI\\CMS Api-Raag\\CMS Api-Raag\\CMS Api-Raag.csproj",
-      "packagesPath": "C:\\Users\\risvana.sherin\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\risvana.sherin\\Source\\Repos\\Experion-Net-RAAG-RESTAPI\\CMS Api-Raag\\CMS Api-Raag\\obj\\",
+      "projectPath": "C:\\Users\\ganesh.a\\Source\\Repos\\Experion-Net-RAAG-RESTAPI\\CMS Api-Raag\\CMS Api-Raag\\CMS Api-Raag.csproj",
+      "packagesPath": "C:\\Users\\ganesh.a\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\ganesh.a\\Source\\Repos\\Experion-Net-RAAG-RESTAPI\\CMS Api-Raag\\CMS Api-Raag\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\risvana.sherin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\ganesh.a\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
