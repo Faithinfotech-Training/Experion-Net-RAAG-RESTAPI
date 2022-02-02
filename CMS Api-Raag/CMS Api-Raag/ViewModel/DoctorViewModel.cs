@@ -19,6 +19,7 @@ namespace CMS_Api_Raag.ViewModel
        
         public string FirstName { get; set; }
         public string LastName { get; set; }
+        //
         //public int Pmid { get; set; }
 
         //public int Ptid { get; set; }
