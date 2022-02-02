@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Experion-Net-RAAG-RESTAPI\\CMS Api-Raag\\CMS Api-Raag\\CMS Api-Raag.csproj": {}
+    "C:\\Users\\risvana.sherin\\Source\\Repos\\Experion-Net-RAAG-RESTAPI\\CMS Api-Raag\\CMS Api-Raag\\CMS Api-Raag.csproj": {}
   },
   "projects": {
-    "D:\\Experion-Net-RAAG-RESTAPI\\CMS Api-Raag\\CMS Api-Raag\\CMS Api-Raag.csproj": {
+    "C:\\Users\\risvana.sherin\\Source\\Repos\\Experion-Net-RAAG-RESTAPI\\CMS Api-Raag\\CMS Api-Raag\\CMS Api-Raag.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Experion-Net-RAAG-RESTAPI\\CMS Api-Raag\\CMS Api-Raag\\CMS Api-Raag.csproj",
+        "projectUniqueName": "C:\\Users\\risvana.sherin\\Source\\Repos\\Experion-Net-RAAG-RESTAPI\\CMS Api-Raag\\CMS Api-Raag\\CMS Api-Raag.csproj",
         "projectName": "CMS Api-Raag",
-        "projectPath": "D:\\Experion-Net-RAAG-RESTAPI\\CMS Api-Raag\\CMS Api-Raag\\CMS Api-Raag.csproj",
-        "packagesPath": "C:\\Users\\akhil.m\\.nuget\\packages\\",
-        "outputPath": "D:\\Experion-Net-RAAG-RESTAPI\\CMS Api-Raag\\CMS Api-Raag\\obj\\",
+        "projectPath": "C:\\Users\\risvana.sherin\\Source\\Repos\\Experion-Net-RAAG-RESTAPI\\CMS Api-Raag\\CMS Api-Raag\\CMS Api-Raag.csproj",
+        "packagesPath": "C:\\Users\\risvana.sherin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\risvana.sherin\\Source\\Repos\\Experion-Net-RAAG-RESTAPI\\CMS Api-Raag\\CMS Api-Raag\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\akhil.m\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\risvana.sherin\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
