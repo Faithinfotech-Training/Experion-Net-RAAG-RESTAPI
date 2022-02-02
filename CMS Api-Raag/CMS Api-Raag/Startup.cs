@@ -28,6 +28,7 @@ namespace CMS_Api_Raag
             services.AddControllers();
         }
 
+
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
@@ -35,6 +36,9 @@ namespace CMS_Api_Raag
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            // add db injection here
+
 
             app.UseHttpsRedirection();
 
