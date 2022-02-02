@@ -13,6 +13,7 @@ namespace CMS_Api_Raag.Models
         public int Pmid { get; set; }
         public int? MedicineId { get; set; }
         public int? DosageId { get; set; }
+        public int? Quantity { get; set; }
 
         public virtual Dosage Dosage { get; set; }
         public virtual Medicine Medicine { get; set; }
