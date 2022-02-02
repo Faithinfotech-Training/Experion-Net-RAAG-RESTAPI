@@ -83,6 +83,7 @@ namespace CMS_Api_Raag.Repository
 
         #endregion
 
+        /*
         #region Get all medicine bills
         public async Task<List<MedicineBill>> GetAllMedicineBills()
         {
@@ -117,6 +118,6 @@ namespace CMS_Api_Raag.Repository
                 return bill;
             }
             return null;
-        }
+        }*/
     }
 }

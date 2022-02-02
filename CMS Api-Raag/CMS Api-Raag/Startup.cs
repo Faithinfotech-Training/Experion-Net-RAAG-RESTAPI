@@ -47,6 +47,8 @@ namespace CMS_Api_Raag
 
             services.AddScoped<IPharmacistRepository, PharmacistRepository>();
             services.AddScoped<ILabTechRepository, LabTechRepository>();
+            services.AddScoped<IlabTestRepository, LabTestRepository>();
+            services.AddScoped<IMedicineBillRepository, MedicinebillRepository>();
 
             //register JWT authentication schema
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)

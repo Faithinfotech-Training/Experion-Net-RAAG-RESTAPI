@@ -1,6 +1,5 @@
 ﻿using CMS_Api_Raag.Models;
 using CMS_Api_Raag.Repository;
-using CMS_Api_Raag.ViewModel;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -12,57 +11,24 @@ namespace CMS_Api_Raag.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class LabTechController : ControllerBase
+    public class LabTestController : ControllerBase
     {
         // data fields
-        public readonly ILabTechRepository _ilabtechrepository;
+        public readonly IlabTestRepository _ilabtestrepository;
 
         // default constructor
-        public LabTechController(ILabTechRepository ilabtechrepository)
+        public LabTestController(IlabTestRepository ilabtestrepository)
         {
-            _ilabtechrepository = ilabtechrepository;
+            _ilabtestrepository = ilabtestrepository;
         }
-
-        #region Testprescription list
-        [HttpGet("testPrescriptionLists")]
-        //https://localhost:44343/api/LabTech/testPrescriptionLists
-        public async Task<IActionResult> getAllTestPrescriptions()
-        {
-            try
-            {
-                var viewData = await _ilabtechrepository.viewTestPrescriptions();
-                if (viewData == null)
-                {
-                    return NotFound();
-                }
-                return Ok(viewData);
-            }
-            catch (Exception)
-            {
-                return BadRequest();
-            }
-        }
-        #endregion
-
-        #region Prescription medicine list
-        [HttpGet("testPrescription-tests")]
-        //https://localhost:44343/api/LabTech/testPrescription-tests?testId=2
-        public async Task<List<LabTestDetailsViewModel>> getAllTestPrescriptionTests(int testId)
-        {
-            return await _ilabtechrepository.viewTestPrescriptionTests(testId);
-        }
-
-        #endregion
-
-        /*
         #region get all bills
-        [HttpGet("Bill")]
-        //https://localhost:44343/api/labTech/Bill
+        [HttpGet]
+        //https://localhost:44343/api/LabTest
         public async Task<IActionResult> GetAllBills()
         {
             try
             {
-                var bill = await _ilabtechrepository.GetAllTestBills();
+                var bill = await _ilabtestrepository.GetAllTestBills();
                 if (bill == null)
                 {
                     return NotFound();
@@ -76,12 +42,13 @@ namespace CMS_Api_Raag.Controllers
         }
         #endregion region
         #region get bill by id
-        [HttpGet("TestBill{id}")]
+        [HttpGet("{id}")]
+        //https://localhost:44343/api/LabTest/3
         public async Task<ActionResult<TestBill>> GetTestBillById(int? id)
         {
             try
             {
-                ActionResult<TestBill> labbill = await _ilabtechrepository.GetTestBillById(id);
+                ActionResult<TestBill> labbill = await _ilabtestrepository.GetTestBillById(id);
                 if (labbill == null)
                 {
                     return NotFound();
@@ -96,15 +63,15 @@ namespace CMS_Api_Raag.Controllers
         #endregion
 
         #region add bill
-        [HttpPost("Bill")]
-        //https://localhost:44343/api/LabTeCh/Bill
+        [HttpPost]
+        //https://localhost:44343/api/LabTest
         public async Task<IActionResult> AddToBill([FromBody] TestBill testbill)
         {
             if (ModelState.IsValid)
             {
                 try
                 {
-                    var billId = await _ilabtechrepository.AddToTestBill(testbill);
+                    var billId = await _ilabtestrepository.AddToTestBill(testbill);
                     if (billId > 0)
                     {
                         return Ok(billId);
@@ -122,8 +89,5 @@ namespace CMS_Api_Raag.Controllers
             return BadRequest();
         }
         #endregion
-        */
-
-
     }
 }

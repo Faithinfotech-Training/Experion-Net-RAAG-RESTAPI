@@ -17,6 +17,7 @@ namespace CMS_Api_Raag.Repository
         // get all medicine details in a prescription using prescription id
         Task<List<PrescriptionmedicinesViewModel>> viewPrescriptionMedicines(int PresId);
 
+        /*
 
         //get all bill
         Task<List<MedicineBill>> GetAllMedicineBills();
@@ -26,6 +27,7 @@ namespace CMS_Api_Raag.Repository
 
         // add to bill
         Task<int> AddToMedicineBill(MedicineBill medcinebill);
+        */
     }
     
 }

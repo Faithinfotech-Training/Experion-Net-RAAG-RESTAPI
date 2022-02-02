@@ -52,6 +52,7 @@ namespace CMS_Api_Raag.Controllers
         }
 
         #endregion
+        /*
         #region get all bills
         [HttpGet("Bill")]
         //https://localhost:44343/api/Pharmacist/Bill
@@ -74,6 +75,7 @@ namespace CMS_Api_Raag.Controllers
         #endregion region
         #region get bill by id
         [HttpGet("bill{id}")]
+        //https://localhost:44343/api/Pharmacist/Bill?Mid=3
         public async Task<ActionResult<MedicineBill>> MedicineBillById(int? Mid)
         {
             try
@@ -118,5 +120,6 @@ namespace CMS_Api_Raag.Controllers
             return BadRequest();
         }
         #endregion
+        */
     }
 }
