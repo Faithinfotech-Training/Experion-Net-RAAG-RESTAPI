@@ -88,7 +88,7 @@ namespace CMS_Api_Raag.Repository
         {
             if (_context != null)
             {
-                return await _context.MedicineBill.Include(p => p.Prescription.PrescriptionDetails).Include(a => a.Appointment).ToListAsync();
+                return await _context.MedicineBill.Include(p => p.Prescription).Include(a => a.Appointment).ToListAsync();
             }
             return null;
             //throw new NotImplementedException();
