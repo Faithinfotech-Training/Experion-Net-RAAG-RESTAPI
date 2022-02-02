@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace CMS_Api_Raag.Repository
 {
-    public class testAkhil
+    interface IDosageRepo
     {
     }
 }
