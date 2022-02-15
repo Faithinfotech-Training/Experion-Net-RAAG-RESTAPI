@@ -66,6 +66,7 @@ namespace CMS_Api_Raag.Repository
                 )
             select new LabTestDetailsViewModel
             {
+                TestId = T.TestId,
                 Testname = T.TestName,
                 Testvalue = PT.Result,
                 Normalrange = PT.NormalRange,
