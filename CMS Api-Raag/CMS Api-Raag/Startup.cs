@@ -1,5 +1,6 @@
 using CMS_Api_Raag.Models;
 using CMS_Api_Raag.Repository;
+using CMS_Api_Raag.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
@@ -49,6 +50,19 @@ namespace CMS_Api_Raag
             services.AddScoped<ILabTechRepository, LabTechRepository>();
             services.AddScoped<IlabTestRepository, LabTestRepository>();
             services.AddScoped<IMedicineBillRepository, MedicinebillRepository>();
+            services.AddScoped<IDepartmentRepo, DepartmentRepo>();
+
+
+            services.AddScoped<IEmployeeRepo, EmployeeRepo>();
+
+            //add dependency injection for category repository
+            services.AddScoped<IUserRepository, UserRepository>();
+
+
+            // configure DI for application services
+            services.AddScoped<IUserService, UserService>();
+
+
 
             //register JWT authentication schema
             services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
@@ -67,10 +81,9 @@ namespace CMS_Api_Raag
                     };
                 }
                 );
-            services.AddScoped<IDoctorRepository, DoctorRepository>();
+
             //Json --resolver
             services.AddControllers()
-                
                 .AddNewtonsoftJson(Options =>
                 {
                     Options.SerializerSettings.ContractResolver = new DefaultContractResolver();
