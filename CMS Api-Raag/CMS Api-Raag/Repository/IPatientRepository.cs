@@ -26,5 +26,8 @@ namespace CMS_Api_Raag.Repository
 
         //Find patient by phonenumber
         Task<IEnumerable<Patient>> GetPatientByContact(string contact);
+
+        Task<List<Patient>> getpatient (int patientId);
+
     }
 }

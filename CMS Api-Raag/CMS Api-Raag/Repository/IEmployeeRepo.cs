@@ -26,7 +26,7 @@ namespace CMS_Api_Raag.Repository
         Task<List<AdminViewModel>> GetAdmins();
 
         //View Doctor Details  ---ViewModel
-        //Task<List<DoctorViewModel>> GetDoctors();
+        Task<List<DoctorListViewModel>> GetDoctors();
 
         //View Employee Details   ---viewModel
         Task<List<EmployeeViewModel>> GetAllEmployees();

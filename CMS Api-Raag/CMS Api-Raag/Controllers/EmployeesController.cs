@@ -138,25 +138,25 @@ namespace CMS_Api_Raag.Controllers
 
         //view Doctor details
         #region GETDoctor
-        //[HttpGet]
-        //[Route("GetDoctorDetails")]
-        //public async Task<IActionResult> GetDoctorDetails()
-        //{
-        //    try
-        //    {
-        //        var emp = await _empRepo.GetDoctors();
-        //        if (emp == null)
-        //        {
-        //            return NotFound();
-        //        }
-        //        return Ok(emp);
+        [HttpGet]
+        [Route("GetDoctorDetails")]
+        public async Task<IActionResult> GetDoctorDetails()
+        {
+            try
+            {
+                var emp = await _empRepo.GetDoctors();
+                if (emp == null)
+                {
+                    return NotFound();
+                }
+                return Ok(emp);
 
-        //    }
-        //    catch (Exception)
-        //    {
-        //        return BadRequest();
-        //    }
-        //}
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+        }
         #endregion
 
 

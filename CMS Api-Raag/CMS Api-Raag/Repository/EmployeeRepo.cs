@@ -120,36 +120,30 @@ namespace CMS_Api_Raag.Repository
         #endregion
 
 
-        //view Doctor details
+       // view Doctor details
         #region Get Doctors
-        //public async Task<List<DoctorViewModel>> GetDoctors()
-        //{
-        //    if (_context != null)
-        //    {
-        //        return await (from e in _context.Employee
-        //                      from d in _context.Doctor
-        //                      where e.EmployeeId == d.EmployeeId
-        //                      select new DoctorViewModel
-        //                      {
-        //                          DoctorId = d.DoctorId,
-        //                          EmployeeId = e.EmployeeId,
-        //                          DepId = d.DepId,
-        //                          FirstName = e.FirstName,
-        //                          LastName = e.LastName,
-        //                          Dob = e.Dob,
-        //                          PhoneNumber = e.PhoneNumber,
-        //                          EmailAddress = e.EmailAddress,
-        //                          Gender = e.Gender,
-        //                          Address = e.Address,
-        //                          Password = e.Password,
-        //                          Doj = e.Doj,
-        //                          EmployeeStatus = e.EmployeeStatus
-        //                      }
-        //                      ).ToListAsync();
+        public async Task<List<DoctorListViewModel>> GetDoctors()
+        {
+            if (_context != null)
+            {
+                return await (from e in _context.Employee
+                              from d in _context.Doctor
+                              from f in _context.Department
+                              where e.EmployeeId == d.EmployeeId && d.DepId == f.DepId
+                              select new DoctorListViewModel
+                              {
+                                  DoctorId = d.DoctorId,
+                                  EmployeeId = e.EmployeeId,
+                                  FirstName = e.FirstName,
+                                  DepId = d.DepId,
+                                  DepName = f.DepName
 
-        //    }
-        //    return null;
-        //}
+                              }
+                              ).ToListAsync();
+
+            }
+            return null;
+        }
         #endregion
 
 
