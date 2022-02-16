@@ -342,6 +342,29 @@ namespace CMS_Api_Raag.Controllers
             return await  _docrepo.Gettest();
         }
 
+        [HttpGet]
+        [Route("Getdosage")]
+        public async Task<ActionResult<IEnumerable<Dosage>>> Getdosage()
+        {
+            return await  _docrepo.GetDosage();
+        }
+
+        [HttpGet]
+        [Route("Gettestname")]
+        public async Task<ActionResult<IEnumerable<Test>>> Gettestname()
+        {
+            return await _docrepo.GetTests();
+        }
+
+
+        [HttpGet]
+        [Route("Getunit")]
+        public async Task<ActionResult<IEnumerable<TestUnit>>> Getunit()
+        {
+            return await _docrepo.GetUnit();
+        }
+
+
 
         [HttpDelete("prescribedtest/{id}")]
         public async Task<IActionResult> DeletePrescribedTest(int? id)

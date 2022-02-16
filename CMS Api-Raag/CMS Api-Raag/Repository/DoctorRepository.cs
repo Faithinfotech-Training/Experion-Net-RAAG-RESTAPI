@@ -238,7 +238,34 @@ namespace CMS_Api_Raag.Repository
 
         }
 
-       
+        public async Task<List<Dosage>> GetDosage()
+        {
+            if (_context != null)
+            {
+                return await _context.Dosage.ToListAsync();
+            }
+            return null;
+        }
+
+        public async Task<List<Test>> GetTests()
+        {
+            if (_context != null)
+            {
+                return await _context.Test.ToListAsync();
+            }
+            return null;
+        }
+
+        public  async Task<List<TestUnit>> GetUnit()
+        {
+            if (_context != null)
+            {
+                return await _context.TestUnit.ToListAsync();
+            }
+            return null;
+        }
+
+
         //public async Task<IEnumerable<Appoinment>> GetAllAppointmentOnDoctorID(int doctorId)
         //{
         //    IQueryable<App> query = _context.Users;
