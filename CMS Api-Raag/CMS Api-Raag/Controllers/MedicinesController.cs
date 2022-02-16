@@ -156,5 +156,26 @@ namespace CMS_Api_Raag.Controllers
             }
         }
         #endregion
+
+        //Get medicine details using Id
+        #region GEt By Id
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Medicine>> GetMedicineById(int? id)
+        {
+            try
+            {
+                ActionResult<Medicine> medicine = await _mediRepo.GetMedicineById(id);
+                if (medicine == null)
+                {
+                    return NotFound();
+                }
+                return medicine;
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+        }
+        #endregion
     }
 }

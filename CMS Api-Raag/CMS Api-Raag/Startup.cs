@@ -51,8 +51,8 @@ namespace CMS_Api_Raag
             services.AddScoped<IlabTestRepository, LabTestRepository>();
             services.AddScoped<IMedicineBillRepository, MedicinebillRepository>();
             services.AddScoped<IDepartmentRepo, DepartmentRepo>();
-
-
+            services.AddScoped<IRoleRepo, RoleRepo>();
+            services.AddScoped<IMedicineRepo, MedicineRepo>();
             services.AddScoped<IEmployeeRepo, EmployeeRepo>();
 
             //add dependency injection for category repository

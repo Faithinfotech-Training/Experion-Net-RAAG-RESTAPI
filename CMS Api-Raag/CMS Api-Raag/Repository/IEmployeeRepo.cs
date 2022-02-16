@@ -1,5 +1,6 @@
 ﻿using CMS_Api_Raag.Models;
 using CMS_Api_Raag.ViewModel;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -20,6 +21,9 @@ namespace CMS_Api_Raag.Repository
 
         //Deleting an Employee details
         Task<int> DeleteEmployee(int? id);
+
+        //search employee by id
+        Task<ActionResult<Employee>> GetEmployeeById(int? id);
 
 
         //view Admin details ----ViewModel

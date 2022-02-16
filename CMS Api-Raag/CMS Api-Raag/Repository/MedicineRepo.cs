@@ -1,5 +1,6 @@
 ﻿using CMS_Api_Raag.Models;
 using CMS_Api_Raag.ViewModel;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -137,6 +138,19 @@ namespace CMS_Api_Raag.Repository
         }
 
 
+        #endregion
+
+        //view Medicine details using Id
+        #region Get by Id
+        public async Task<ActionResult<Medicine>> GetMedicineById(int? id)
+        {
+            if (_context != null)
+            {
+                return await _context.Medicine.FindAsync(id);
+
+            }
+            return null;
+        }
         #endregion
 
     }
