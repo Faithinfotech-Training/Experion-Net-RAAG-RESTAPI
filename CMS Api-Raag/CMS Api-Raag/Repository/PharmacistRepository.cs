@@ -71,6 +71,7 @@ namespace CMS_Api_Raag.Repository
                 )
             select new PrescriptionmedicinesViewModel
             {
+                 MedicineId = M.MedicineId,
                  Medicinename = M.MedicineName,
                  Dosage = D.Dosage1,
                  Quantity = (int)PM.Quantity,
