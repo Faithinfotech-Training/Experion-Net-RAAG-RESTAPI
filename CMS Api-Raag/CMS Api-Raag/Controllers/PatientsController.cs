@@ -154,5 +154,15 @@ namespace CMS_Api_Raag.Controllers
             }
         }
         #endregion
+
+
+        #region Prescription medicine list
+        [HttpGet("getpatient")]
+        public async Task<List<Patient>> getAllTestPrescriptionTests(int patientId)
+        {
+            return await _patientRepository.getpatient(patientId);
+        }
+
+        #endregion
     }
 }

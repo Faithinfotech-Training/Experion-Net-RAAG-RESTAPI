@@ -13,6 +13,7 @@ namespace CMS_Api_Raag.Models
             Doctor = new HashSet<Doctor>();
         }
 
+        public string UserName { get; set; }
         public int EmployeeId { get; set; }
         public int? RoleId { get; set; }
         public string FirstName { get; set; }
@@ -25,6 +26,7 @@ namespace CMS_Api_Raag.Models
         public string Password { get; set; }
         public DateTime Doj { get; set; }
         public string EmployeeStatus { get; set; }
+
         public virtual Role Role { get; set; }
         public virtual ICollection<Admin> Admin { get; set; }
         public virtual ICollection<Appoinment> Appoinment { get; set; }

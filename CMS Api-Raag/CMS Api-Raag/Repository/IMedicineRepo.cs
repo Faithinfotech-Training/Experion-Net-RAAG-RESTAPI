@@ -1,5 +1,6 @@
 ﻿using CMS_Api_Raag.Models;
 using CMS_Api_Raag.ViewModel;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -29,6 +30,9 @@ namespace CMS_Api_Raag.Repository
 
         //Deleting an Medicine details
         Task<int> DeleteMedicine(int? id);
+
+        //view medicine details by id
+        Task<ActionResult<Medicine>> GetMedicineById(int? id);
 
 
 
