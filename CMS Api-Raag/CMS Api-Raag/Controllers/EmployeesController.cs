@@ -112,6 +112,29 @@ namespace CMS_Api_Raag.Controllers
         #endregion
 
 
+        //Get employee details using Id
+        #region GEt By Id
+        [HttpGet("{id}")]
+        public async Task<ActionResult<Employee>> GetEmployeetById(int? id)
+        {
+            try
+            {
+                ActionResult<Employee> employee = await _empRepo.GetEmployeeById(id);
+                if (employee == null)
+                {
+                    return NotFound();
+                }
+                return employee;
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+        }
+        #endregion
+
+
+
         //view Admin details
         #region GETAdmin
         [HttpGet]

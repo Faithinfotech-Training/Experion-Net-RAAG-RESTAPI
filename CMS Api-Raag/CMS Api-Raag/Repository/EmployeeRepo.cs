@@ -1,5 +1,6 @@
 ﻿using CMS_Api_Raag.Models;
 using CMS_Api_Raag.ViewModel;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -84,6 +85,19 @@ namespace CMS_Api_Raag.Repository
             return result;
         }
 
+        #endregion
+
+        //get employee details using id
+        #region Get by Id
+        public async Task<ActionResult<Employee>> GetEmployeeById(int? id)
+        {
+            if (_context != null)
+            {
+                return await _context.Employee.FindAsync(id);
+
+            }
+            return null;
+        }
         #endregion
 
 
