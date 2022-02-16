@@ -44,6 +44,13 @@ namespace CMS_Api_Raag
             services.AddScoped<IConsultationBillRepository, ConsultationBillRepository>();
             services.AddScoped<IAppointmentRepository, AppointmentRepository>();
             services.AddScoped<ITokenRepository, TokenRepository>();
+            services.AddScoped<ITokenRepository, TokenRepository>();
+
+            services.AddScoped<IRoleRepo, RoleRepo>();
+            services.AddScoped<IEmployeeRepo, EmployeeRepo>();
+            services.AddScoped<IMedicineRepo, MedicineRepo>();
+            services.AddScoped<IDepartmentRepo, DepartmentRepo>();
+
 
             services.AddScoped<IPharmacistRepository, PharmacistRepository>();
             services.AddScoped<ILabTechRepository, LabTechRepository>();
