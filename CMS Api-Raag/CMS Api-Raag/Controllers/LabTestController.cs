@@ -89,5 +89,26 @@ namespace CMS_Api_Raag.Controllers
             return BadRequest();
         }
         #endregion
+        #region Update labtest
+        [HttpPut("labtestresults")]
+        public async Task<IActionResult> UpdateLabTest([FromBody] PrescribedTest test)
+        {
+            //check the validation of body
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    await _ilabtestrepository.UpdateTestresult(test);
+                    return Ok();
+
+                }
+                catch (Exception)
+                {
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
+        #endregion
     }
 }

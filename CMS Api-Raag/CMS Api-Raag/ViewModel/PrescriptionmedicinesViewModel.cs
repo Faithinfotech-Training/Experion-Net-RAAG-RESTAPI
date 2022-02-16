@@ -7,6 +7,7 @@ namespace CMS_Api_Raag.ViewModel
 {
     public class PrescriptionmedicinesViewModel
     {
+        public int AppointmentId { get; set; }
         public int MedicineId { get; set; }
         public string Medicinename { get; set; }
         public string Dosage { get; set; }
