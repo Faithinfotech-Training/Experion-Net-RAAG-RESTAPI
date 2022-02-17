@@ -71,7 +71,9 @@ namespace CMS_Api_Raag.Repository
                 Testname = T.TestName,
                 Testvalue = PT.Result,
                 Normalrange = PT.NormalRange,
-                Unit = U.Unit
+                Unit = U.Unit,
+                Price = T.TestCost
+
             }
             ).ToListAsync();
 

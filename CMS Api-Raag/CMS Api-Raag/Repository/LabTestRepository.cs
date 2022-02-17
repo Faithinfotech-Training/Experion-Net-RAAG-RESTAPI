@@ -68,5 +68,22 @@ namespace CMS_Api_Raag.Repository
             }
         }
 
+        public async Task<List<TestBill>> GetTestBillByPresId(int? PresId)
+        {
+            if (_context != null)
+            {
+                return await(from TB in _context.TestBill
+                             where TB.TprescriptionId == PresId
+                             select new TestBill
+                             {
+                                TbillId = TB.TbillId,
+                                TprescriptionId = TB.TprescriptionId,
+                                AppointmentId = TB.AppointmentId,
+                                TotalPrice = TB.TotalPrice,
+                                UpdatedDate =TB.UpdatedDate
+                             }).ToListAsync();
+            }
+            return null;
+        }
     }
 }
