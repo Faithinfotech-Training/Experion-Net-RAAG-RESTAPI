@@ -32,5 +32,7 @@ namespace CMS_Api_Raag.ViewModel
         //public int TprescriptionId { get; set; }
         public int TokenNo { get; set; }
         public DateTime? TokenDate { get; set; }
+        public string DoctorName { get; set; }
+        public int DoctorId { get; set; }
     }
 }

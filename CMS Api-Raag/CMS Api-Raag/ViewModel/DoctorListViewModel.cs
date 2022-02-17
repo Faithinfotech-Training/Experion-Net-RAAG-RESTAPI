@@ -13,6 +13,7 @@ namespace CMS_Api_Raag.ViewModel
         public string DepName { get; set; }
         public int? EmployeeId { get; set; }
         public string FirstName { get; set; }
+
     }
 
 }

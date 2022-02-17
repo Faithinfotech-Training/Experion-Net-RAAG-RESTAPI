@@ -25,6 +25,12 @@ namespace CMS_Api_Raag.Repository
         //get an Appointment by id
         Task<ActionResult<Appoinment>> GetAppoinmentById(int? id);
 
+        // get all appointments --view Model
+        Task<List<AppointmentViewModel>> GetAllAppointments();
+
+        //to insert into all 3 tables
+        Task<int> ScheduleAppoinment(AppointmentViewModel appoinment);
+
 
     }
 }
