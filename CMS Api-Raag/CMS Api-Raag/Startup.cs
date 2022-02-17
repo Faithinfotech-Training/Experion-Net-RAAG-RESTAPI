@@ -3,6 +3,7 @@ using CMS_Api_Raag.Repository;
 using CMS_Api_Raag.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
@@ -101,7 +102,7 @@ namespace CMS_Api_Raag
                         Newtonsoft.Json.ReferenceLoopHandling.Ignore;
                 });
 
-            EnableCorsAttribute cors = new EnableCorsAttribute("*", "*", "*");
+           // EnableCorsAttribute cors = new Microsoft.AspNetCore.Cors.EnableCorsAttribute("*", "*", "*");
 
             //enable Cors
             services.AddCors();
