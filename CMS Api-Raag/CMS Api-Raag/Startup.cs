@@ -46,19 +46,23 @@ namespace CMS_Api_Raag
             services.AddScoped<IAppointmentRepository, AppointmentRepository>();
             services.AddScoped<ITokenRepository, TokenRepository>();
 
+            services.AddScoped<IRoleRepo, RoleRepo>();
+            services.AddScoped<IEmployeeRepo, EmployeeRepo>();
+            services.AddScoped<IMedicineRepo, MedicineRepo>();
+            services.AddScoped<IDepartmentRepo, DepartmentRepo>();
+
+
             services.AddScoped<IPharmacistRepository, PharmacistRepository>();
             services.AddScoped<ILabTechRepository, LabTechRepository>();
             services.AddScoped<IlabTestRepository, LabTestRepository>();
             services.AddScoped<IMedicineBillRepository, MedicinebillRepository>();
-            services.AddScoped<IDepartmentRepo, DepartmentRepo>();
-            services.AddScoped<IRoleRepo, RoleRepo>();
-            services.AddScoped<IMedicineRepo, MedicineRepo>();
-            services.AddScoped<IEmployeeRepo, EmployeeRepo>();
+
+            services.AddScoped<IDoctorRepository, DoctorRepository>();
 
             //add dependency injection for category repository
             services.AddScoped<IUserRepository, UserRepository>();
 
-
+            services.AddScoped<IDoctorRepository, DoctorRepository>();
             // configure DI for application services
             services.AddScoped<IUserService, UserService>();
 

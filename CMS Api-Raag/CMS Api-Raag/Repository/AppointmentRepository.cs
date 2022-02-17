@@ -99,5 +99,47 @@ namespace CMS_Api_Raag.Repository
             return result;
         }
         #endregion
+
+
+        //get all appointments --view model
+
+        public async Task<List<AppointmentViewModel>> GetAllAppointments()
+        {
+            if (_context != null)
+            {
+                //LINQ
+                return await (from u in _context.Patient
+                              from r in _context.Appoinment
+                              from s in _context.Token
+                              from h in _context.Doctor
+                              from e in _context.Employee
+                              where u.PatientId == r.PatientId && s.DoctorId == h.DoctorId
+                              && r.AppointmentId == s.AppointmentId && e.EmployeeId == h.EmployeeId
+                              select new AppointmentViewModel
+                              {
+                                  AppoinmentId = r.AppointmentId,
+                                  FirstName = u.FirstName,
+                                  LastName = u.LastName,
+                                  TokenNo = s.TokenNo,
+                                  TokenDate = s.TokenDate,
+                                  DoctorName = e.FirstName
+                              }
+                              ).ToListAsync();
+            }
+            return null;
+        }
+
+
+        public async Task<int> ScheduleAppoinment(AppointmentViewModel appoinment)
+        {
+            Appoinment appoinment1 = new Appoinment();
+            appoinment1.AppointmentId = appoinment.AppoinmentId;
+            appoinment1.PatientId = appoinment.PatientId;
+            appoinment1.EmployeeId = appoinment.EmployeeId;
+
+            await _context.Appoinment.AddAsync(appoinment1);
+            await _context.SaveChangesAsync();
+            return appoinment1.AppointmentId;
+        }
     }
 }

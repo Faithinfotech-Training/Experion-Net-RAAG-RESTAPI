@@ -47,5 +47,26 @@ namespace CMS_Api_Raag.Repository
             }
             return null;
         }
+        public async Task<int> AddTestResult(PrescribedTest testresult)
+        {
+            if (_context != null)
+            {
+                await _context.PrescribedTest.AddAsync(testresult);
+                await _context.SaveChangesAsync();
+                return testresult.Ptid;
+            }
+            return 0;
+        }
+
+        public async Task UpdateTestresult(PrescribedTest testresult)
+        {
+            if (_context != null)
+            {
+                _context.Entry(testresult).State = EntityState.Modified;
+                _context.PrescribedTest.Update(testresult);
+                await _context.SaveChangesAsync();
+            }
+        }
+
     }
 }

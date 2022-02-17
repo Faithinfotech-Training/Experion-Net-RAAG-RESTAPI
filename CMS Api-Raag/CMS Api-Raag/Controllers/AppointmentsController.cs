@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using CMS_Api_Raag.Models;
 using CMS_Api_Raag.Repository;
+using CMS_Api_Raag.ViewModel;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
@@ -130,5 +131,55 @@ namespace CMS_Api_Raag.Controllers
             }
         }
         #endregion
+
+
+        //get all appointments -- view mode
+        [HttpGet]
+        [Route("GetAllAppoinment")]
+        public async Task<IActionResult> GetAllAppoinment()
+        {
+            try
+            {
+                var users = await _appointmentRepository.GetAllAppointments();
+                if (users == null)
+                {
+                    return NotFound();
+                }
+                return Ok(users);
+            }
+            catch
+            {
+                return BadRequest();
+            }
+        }
+
+        //POST method to insert into multiple tables
+        [HttpPost]
+        [Route("scheduleappoinment")]
+        public async Task<IActionResult> ScheduleAppoinment([FromBody] AppointmentViewModel appoinment)
+        {
+            if(ModelState.IsValid)
+            {
+                try
+                {
+                    var appoinmentId = await _appointmentRepository.ScheduleAppoinment(appoinment);
+                    if(appoinmentId >0)
+                    {
+                        return Ok(appoinmentId);
+                    }
+                    else
+                    {
+                        return NotFound();
+                    }
+                }
+                catch(Exception)
+                {
+
+                    return BadRequest();
+
+                }
+            }
+            return BadRequest();
+        }
     }
 }

@@ -24,7 +24,13 @@ namespace CMS_Api_Raag.Repository
         Task<int> DeletePrescriptionDetails(int? id);
         Task<int> DeletePrescribedMedicine(int? id);
 
-        //Task<List<Role>> GetRole();
+        Task<List<Dosage>> GetDosage();
+
+        Task<List<Test>> GetTests();
+
+        Task<List<TestUnit>> GetUnit();
+
+
         Task UpdatePrescription(Prescription prescription);
 
         Task UpdatePrescriptionDetails(PrescriptionDetails prescriptiondetails);

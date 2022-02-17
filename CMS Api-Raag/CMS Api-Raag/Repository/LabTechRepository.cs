@@ -48,9 +48,7 @@ namespace CMS_Api_Raag.Repository
             //throw new NotImplementedException();
         }
 
-        public async Task<List<LabTestDetailsViewModel>> viewTestPrescriptionTests(int testId)
-        {
-            return await(
+        public async Task<List<LabTestDetailsViewModel>> viewTestPrescriptionTests(int testId) => await (
 
             from TP in _context.TestPrescription
             from TD in _context.TestDetails
@@ -66,14 +64,16 @@ namespace CMS_Api_Raag.Repository
                 )
             select new LabTestDetailsViewModel
             {
+                AppointmentId = (int)TP.AppointmentId,
                 TestId = T.TestId,
+                PrescribedTestId = PT.Ptid,
+                UnitId = (int)PT.UnitId,
                 Testname = T.TestName,
                 Testvalue = PT.Result,
                 Normalrange = PT.NormalRange,
                 Unit = U.Unit
             }
             ).ToListAsync();
-        }
 
         /*
 

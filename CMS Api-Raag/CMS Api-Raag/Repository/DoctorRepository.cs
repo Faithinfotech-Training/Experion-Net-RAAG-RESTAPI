@@ -191,15 +191,17 @@ namespace CMS_Api_Raag.Repository
                               from r in _context.Appoinment
                               from s in _context.Token
                               from h in _context.Doctor
+                              from e in _context.Employee
                               where u.PatientId == r.PatientId && s.DoctorId == h.DoctorId 
+                              && r.AppointmentId == s.AppointmentId && e.EmployeeId == h.EmployeeId
                               select new DoctorViewModel
                               {
                                   AppoinmentId = r.AppointmentId,
                                   FirstName = u.FirstName,
                                   LastName = u.LastName,
                                   TokenNo = s.TokenNo,
-                                  TokenDate =s.TokenDate
-                          
+                                  TokenDate =s.TokenDate,
+                                  DoctorName = e.FirstName    
                               }
                               ).ToListAsync();
             }
@@ -238,7 +240,34 @@ namespace CMS_Api_Raag.Repository
 
         }
 
-       
+        public async Task<List<Dosage>> GetDosage()
+        {
+            if (_context != null)
+            {
+                return await _context.Dosage.ToListAsync();
+            }
+            return null;
+        }
+
+        public async Task<List<Test>> GetTests()
+        {
+            if (_context != null)
+            {
+                return await _context.Test.ToListAsync();
+            }
+            return null;
+        }
+
+        public  async Task<List<TestUnit>> GetUnit()
+        {
+            if (_context != null)
+            {
+                return await _context.TestUnit.ToListAsync();
+            }
+            return null;
+        }
+
+
         //public async Task<IEnumerable<Appoinment>> GetAllAppointmentOnDoctorID(int doctorId)
         //{
         //    IQueryable<App> query = _context.Users;
