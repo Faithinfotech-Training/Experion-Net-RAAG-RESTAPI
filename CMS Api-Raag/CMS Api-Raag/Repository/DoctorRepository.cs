@@ -191,7 +191,7 @@ namespace CMS_Api_Raag.Repository
                               from r in _context.Appoinment
                               from s in _context.Token
                               from h in _context.Doctor
-                              where u.PatientId == r.PatientId && s.DoctorId == h.DoctorId 
+                              where u.PatientId == r.PatientId && s.DoctorId == h.DoctorId && r.AppointmentId ==s.AppointmentId
                               select new DoctorViewModel
                               {
                                   AppoinmentId = r.AppointmentId,

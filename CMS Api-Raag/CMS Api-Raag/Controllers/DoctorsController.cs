@@ -108,8 +108,8 @@ namespace CMS_Api_Raag.Controllers
         }
 
         [HttpPost]
-        [Route("AddPrescribedMedicine")]
-        public async Task<IActionResult> AddPrescribedMedicine([FromBody] PrescribedMedicine prescribedmedicine)
+        [Route("Addmed")]
+        public async Task<IActionResult> AddMed([FromBody] PrescribedMedicine prescribedmedicine)
         {
             //check the validation of body
             if (ModelState.IsValid)

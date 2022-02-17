@@ -65,7 +65,7 @@ namespace CMS_Api_Raag
             //add dependency injection for category repository
             services.AddScoped<IUserRepository, UserRepository>();
 
-
+            services.AddScoped<IDoctorRepository, DoctorRepository>();
             // configure DI for application services
             services.AddScoped<IUserService, UserService>();
 
