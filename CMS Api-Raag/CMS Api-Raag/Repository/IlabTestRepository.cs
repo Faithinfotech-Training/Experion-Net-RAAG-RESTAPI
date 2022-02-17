@@ -17,5 +17,11 @@ namespace CMS_Api_Raag.Repository
 
         // add to testbill
         Task<int> AddToTestBill(TestBill testbill);
+
+        //For adding test resylt
+        Task<int> AddTestResult(PrescribedTest testresult);
+
+        //Updating test results
+        Task UpdateTestresult(PrescribedTest testresult);
     }
 }
