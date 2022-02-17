@@ -5541,19 +5541,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\ganesh.a\\.nuget\\packages\\": {}
+    "C:\\Users\\anjana.kg\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\ganesh.a\\Source\\Repos\\Experion-Net-RAAG-RESTAPI\\CMS Api-Raag\\CMS Api-Raag\\CMS Api-Raag.csproj",
+      "projectUniqueName": "E:\\#projectapi\\Experion-Net-RAAG-RESTAPI\\CMS Api-Raag\\CMS Api-Raag\\CMS Api-Raag.csproj",
       "projectName": "CMS Api-Raag",
-      "projectPath": "C:\\Users\\ganesh.a\\Source\\Repos\\Experion-Net-RAAG-RESTAPI\\CMS Api-Raag\\CMS Api-Raag\\CMS Api-Raag.csproj",
-      "packagesPath": "C:\\Users\\ganesh.a\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\ganesh.a\\Source\\Repos\\Experion-Net-RAAG-RESTAPI\\CMS Api-Raag\\CMS Api-Raag\\obj\\",
+      "projectPath": "E:\\#projectapi\\Experion-Net-RAAG-RESTAPI\\CMS Api-Raag\\CMS Api-Raag\\CMS Api-Raag.csproj",
+      "packagesPath": "C:\\Users\\anjana.kg\\.nuget\\packages\\",
+      "outputPath": "E:\\#projectapi\\Experion-Net-RAAG-RESTAPI\\CMS Api-Raag\\CMS Api-Raag\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\ganesh.a\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\anjana.kg\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -5625,12 +5625,6 @@
     }
   },
   "logs": [
-    {
-      "code": "Undefined",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Problem reading the cache file C:\\Users\\ganesh.a\\Source\\Repos\\Experion-Net-RAAG-RESTAPI\\CMS Api-Raag\\CMS Api-Raag\\obj\\project.nuget.cache : Invalid property identifier character: <. Path 'version', line 3, position 0."
-    },
     {
       "code": "NU1701",
       "level": "Warning",

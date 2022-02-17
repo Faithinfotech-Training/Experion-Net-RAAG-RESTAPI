@@ -13,8 +13,14 @@ namespace CMS_Api_Raag.Repository
         //view All Employees
         Task<List<Employee>> GetEmployees();
 
+        //view All doctors
+        Task<List<Doctor>> GetallDoctors();
+
         //For adding new Employee
         Task<int> AddEmployee(Employee employee);
+
+        //adding doctor
+        Task<int> AddDoctor(Doctor employee);
 
         //Updating Employee details
         Task UpdateEmployee(Employee employee);

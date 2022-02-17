@@ -97,7 +97,7 @@ namespace CMS_Api_Raag
                         Newtonsoft.Json.ReferenceLoopHandling.Ignore;
                 });
 
-            EnableCorsAttribute cors = new EnableCorsAttribute("*", "*", "*");
+            //EnableCorsAttribute cors = new EnableCorsAttribute("*", "*", "*");
 
             //enable Cors
             services.AddCors();

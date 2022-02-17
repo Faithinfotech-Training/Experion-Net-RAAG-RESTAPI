@@ -1,7 +1,10 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\CMS Api-Raag",
+    "\\CMS Api-Raag\\CMS Api-Raag",
+    "\\CMS Api-Raag\\CMS Api-Raag\\Repository"
   ],
-  "SelectedNode": "\\CMS Api-Raag.sln",
+  "SelectedNode": "\\CMS Api-Raag\\CMS Api-Raag\\Repository\\IMedicineRepo.cs",
   "PreviewInSolutionExplorer": false
 }

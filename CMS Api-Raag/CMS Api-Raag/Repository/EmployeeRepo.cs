@@ -30,6 +30,18 @@ namespace CMS_Api_Raag.Repository
         }
         #endregion
 
+        //Viewing all doctor details
+        #region Getdoctors
+        public async Task<List<Doctor>> GetallDoctors()
+        {
+            if (_context != null)
+            {
+                return await _context.Doctor.ToListAsync();
+            }
+            return null;
+        }
+        #endregion
+
 
         //For Adding new Employee
         #region AddEmployee
@@ -40,6 +52,20 @@ namespace CMS_Api_Raag.Repository
                 await _context.Employee.AddAsync(employee);
                 await _context.SaveChangesAsync();
                 return employee.EmployeeId;
+            }
+            return 0;
+        }
+        #endregion
+
+        //For Adding new doctor
+        #region AddDoctor
+        public async Task<int> AddDoctor(Doctor employee)
+        {
+            if (_context != null)
+            {
+                await _context.Doctor.AddAsync(employee);
+                await _context.SaveChangesAsync();
+                return employee.DoctorId;
             }
             return 0;
         }
@@ -191,6 +217,8 @@ namespace CMS_Api_Raag.Repository
             }
             return null;
         }
+
+       
         #endregion
 
 
