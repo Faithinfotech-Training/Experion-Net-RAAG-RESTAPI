@@ -30,6 +30,17 @@ namespace CMS_Api_Raag.Controllers
         #endregion
 
 
+        //viewing allDoctor details
+        #region GetDoctor
+        [HttpGet]
+        [Route("GetDoctor")]
+        public async Task<ActionResult<IEnumerable<Doctor>>> GetallDoctor()
+        {
+            return await _empRepo.GetallDoctors();
+        }
+        #endregion
+
+
         //Adding new Employee
         #region AddEmployee
         [HttpPost]
@@ -44,6 +55,37 @@ namespace CMS_Api_Raag.Controllers
                     if (employeeId > 0)
                     {
                         return Ok(employeeId);
+                    }
+                    else
+                    {
+                        return NotFound();
+                    }
+
+                }
+                catch (Exception)
+                {
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
+        #endregion
+
+        //Adding new doctor
+        #region AddDoctor
+        [HttpPost]
+        [Route("GetDoctor")]
+        public async Task<IActionResult> AddDoctor([FromBody] Doctor employee)
+        {
+
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    var drId = await _empRepo.AddDoctor(employee);
+                    if (drId > 0)
+                    {
+                        return Ok(drId);
                     }
                     else
                     {
