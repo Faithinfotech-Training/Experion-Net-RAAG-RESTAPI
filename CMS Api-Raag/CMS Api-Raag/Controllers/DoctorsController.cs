@@ -335,6 +335,67 @@ namespace CMS_Api_Raag.Controllers
             return BadRequest();
         }
 
+        [HttpPost]
+        [Route("Addtestdet")]
+        public async Task<IActionResult> AddtestDetail([FromBody] TestDetails testdet)
+        {
+            //check the validation of body
+            if (ModelState.IsValid)
+
+            {
+                try
+                {
+                    var Id = await _docrepo.AddTestDetail(testdet);
+                    if (Id > 0)
+                    {
+                        return Ok(Id);
+
+                    }
+                    else
+                    {
+                        return NotFound();
+                    }
+                }
+                catch (Exception)
+                {
+                    return BadRequest();
+                }
+
+
+            }
+            return BadRequest();
+        }
+        [HttpPost]
+        [Route("Addtestpres")]
+        public async Task<IActionResult> Addtestpres([FromBody] TestPrescription testpr)
+        {
+            //check the validation of body
+            if (ModelState.IsValid)
+
+            {
+                try
+                {
+                    var Id = await _docrepo.AddTestprescribe(testpr);
+                    if (Id > 0)
+                    {
+                        return Ok(Id);
+
+                    }
+                    else
+                    {
+                        return NotFound();
+                    }
+                }
+                catch (Exception)
+                {
+                    return BadRequest();
+                }
+
+
+            }
+            return BadRequest();
+        }
+
         [HttpGet]
         [Route("Gettest")]
         public async Task<ActionResult<IEnumerable<PrescribedTest>>> Gettest()
