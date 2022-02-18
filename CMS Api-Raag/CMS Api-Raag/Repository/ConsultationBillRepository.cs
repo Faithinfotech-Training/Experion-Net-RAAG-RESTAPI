@@ -132,12 +132,16 @@ namespace CMS_Api_Raag.Repository
                (from d in _context.Token
                 from u in _context.Appoinment
                 from r in _context.ConsultationBillDetails
+                from s in _context.Doctor
+                from e in _context.Employee
                 where
                 (
                     u.AppointmentId == AppointmentId
                     && u.AppointmentId == r.AppointmentId
                     && d.AppointmentId == u.AppointmentId
                     && r.AppointmentId == d.AppointmentId
+                    && s.DoctorId == d.DoctorId
+                    && s.EmployeeId == e.EmployeeId
                 )
                 select new ConsultationBillViewModel
                 {
@@ -146,7 +150,9 @@ namespace CMS_Api_Raag.Repository
                     FirstName = u.Patient.FirstName,
                     DoctorId = d.Doctor.DoctorId,
                     ConsultationFee = r.ConsultationFee,
-                    UpdatedDate = r.UpdatedDate
+                    UpdatedDate = r.UpdatedDate,
+                    TokenNo = d.TokenNo,
+                    DoctorName = e.FirstName
                 }
                 ).ToListAsync();
         }

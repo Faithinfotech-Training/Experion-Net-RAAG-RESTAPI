@@ -13,5 +13,8 @@ namespace CMS_Api_Raag.ViewModel
         public int? DoctorId { get; set; }
         public decimal ConsultationFee { get; set; }
         public DateTime UpdatedDate { get; set; }
+        public int TokenNo { get; set; }
+        public string DoctorName { get; set; }
+
     }
 }
