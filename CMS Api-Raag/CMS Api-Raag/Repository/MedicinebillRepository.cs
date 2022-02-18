@@ -56,5 +56,25 @@ namespace CMS_Api_Raag.Repository
             return null;
         }
         #endregion
+
+        public async Task<List<MedicineBill>> GetMedicineBillByPresId(int? PresId)
+        {
+            if (_context != null)
+            {
+                return await (from MB in _context.MedicineBill
+                            where MB.PrescriptionId == PresId
+                            select new MedicineBill
+                            {
+                                MbillId = MB.MbillId,
+                                PrescriptionId = MB.PrescriptionId,
+                                AppointmentId = MB.AppointmentId,
+                                MedicinePrice = MB.MedicinePrice,
+                                UpdatedDate = MB.UpdatedDate,
+
+                            }).ToListAsync();
+            }
+            return null;
+        }
+        
     }
 }

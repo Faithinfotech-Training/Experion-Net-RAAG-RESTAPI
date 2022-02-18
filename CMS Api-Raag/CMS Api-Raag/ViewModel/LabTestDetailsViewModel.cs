@@ -15,5 +15,7 @@ namespace CMS_Api_Raag.ViewModel
         public decimal Testvalue { get; set; }
         public string Normalrange { get; set; }
         public string Unit { get; set; }
+        public int Price { get; set;
+        }
     }
 }

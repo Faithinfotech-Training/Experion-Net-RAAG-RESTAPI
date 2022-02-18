@@ -15,6 +15,9 @@ namespace CMS_Api_Raag.Repository
         // get bill by id
         Task<ActionResult<MedicineBill>> GetMedicineBillById(int? id);
 
+        // get medicine bill by prescription id
+        Task<List<MedicineBill>> GetMedicineBillByPresId(int? PresId);
+
         // add to bill
         Task<int> AddToMedicineBill(MedicineBill medcinebill);
     }

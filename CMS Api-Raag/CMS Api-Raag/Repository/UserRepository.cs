@@ -20,9 +20,17 @@ namespace CMS_Api_Raag.Repository
         #region get user by Name and password
         public async Task<Employee> GetUserByNameandPasswords(string name, string password)
         {
-
-            Employee result = await _context1.Employee.Where(x => x.UserName == name && x.Password == password).FirstAsync();
-            return result;
+            try
+            {
+                Employee result = await _context1.Employee.Where(x => x.UserName == name && x.Password == password).FirstAsync();
+                return result;
+            }
+            catch(Exception e)
+            {
+                Employee result = await _context1.Employee.Where(x => x.UserName == name && x.Password == password).FirstAsync();
+                return result;
+            }
+            
 
         }
         #endregion
