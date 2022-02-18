@@ -40,6 +40,10 @@ namespace CMS_Api_Raag.Repository
 
         Task<int> AddPrescribedTest(PrescribedTest pretest);
 
+        Task<int> AddTestDetail(TestDetails testdetail);
+
+        Task<int> AddTestprescribe(TestPrescription testpre);
+
         Task UpdatePrescribedTest(PrescribedTest pretest);
 
         Task<int> DeletePrescribedTest(int? id);
