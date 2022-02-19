@@ -267,6 +267,28 @@ namespace CMS_Api_Raag.Repository
             return null;
         }
 
+        public async Task<int> AddTestDetail(TestDetails testdetail)
+        {
+            if (_context != null)
+            {
+                await _context.TestDetails.AddAsync(testdetail);
+                await _context.SaveChangesAsync();
+                return testdetail.Tdid;
+            }
+            return 0;
+        }
+
+        public async Task<int> AddTestprescribe(TestPrescription testpre)
+        {
+            if (_context != null)
+            {
+                await _context.TestPrescription.AddAsync(testpre);
+                await _context.SaveChangesAsync();
+                return testpre.TprescriptionId;
+            }
+            return 0;
+        }
+
 
         //public async Task<IEnumerable<Appoinment>> GetAllAppointmentOnDoctorID(int doctorId)
         //{

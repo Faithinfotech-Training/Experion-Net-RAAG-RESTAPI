@@ -15,6 +15,9 @@ namespace CMS_Api_Raag.Repository
         // get test bill by id
         Task<ActionResult<TestBill>> GetTestBillById(int? id);
 
+        // get test bill by id
+        Task<List<TestBill>> GetTestBillByPresId(int? PresId);
+
         // add to testbill
         Task<int> AddToTestBill(TestBill testbill);
 

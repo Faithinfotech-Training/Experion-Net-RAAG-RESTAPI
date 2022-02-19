@@ -29,5 +29,7 @@ namespace CMS_Api_Raag.Repository
 
         Task<List<Patient>> getpatient (int patientId);
 
+
+        Task<List<Patient>> getpatientbycontact(string contact);
     }
 }

@@ -110,5 +110,14 @@ namespace CMS_Api_Raag.Controllers
             return BadRequest();
         }
         #endregion
+
+        #region test bill by prescription id
+        [HttpGet("testid")]
+        public async Task<List<TestBill>> GetMedicineByPresId(int? PresId)
+        {
+            List<TestBill> testbill = await _ilabtestrepository.GetTestBillByPresId(PresId);
+            return testbill;
+        }
+        #endregion
     }
 }

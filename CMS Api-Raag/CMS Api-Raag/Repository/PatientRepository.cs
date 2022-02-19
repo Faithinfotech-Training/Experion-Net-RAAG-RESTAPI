@@ -111,11 +111,33 @@ namespace CMS_Api_Raag.Repository
         }
         #endregion
 
-
+        //get patient by entering id in search
         public async Task<List<Patient>> getpatient(int patientId)
         {
             return await (from p in _context.Patient
                           where p.PatientId == patientId
+                          select new Patient
+                          {
+
+                              PatientId = p.PatientId,
+                              FirstName = p.FirstName,
+                              LastName = p.LastName,
+                              Gender = p.Gender,
+                              BloodGroup = p.BloodGroup,
+                              Dob = p.Dob,
+                              Address = p.Address,
+                              EmailAddress = p.EmailAddress,
+                              PhoneNumber = p.PhoneNumber,
+                              Pincode = p.Pincode
+                          }
+                ).ToListAsync();
+        }
+
+        //get patient by phonrnumber in search
+        public async Task<List<Patient>> getpatientbycontact(string contact)
+        {
+            return await (from p in _context.Patient
+                          where p.PhoneNumber == contact
                           select new Patient
                           {
 

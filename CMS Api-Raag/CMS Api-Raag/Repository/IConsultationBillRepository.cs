@@ -28,7 +28,7 @@ namespace CMS_Api_Raag.Repository
         //get  consultation bill ---view model
         Task<List<ConsultationBillViewModel>> GetConsultationBill();
 
-        //get  consultation bill by id ---view model  
+        //get  consultation bill by appointmentid ---view model  
         Task<List<ConsultationBillViewModel>> GetConsultationBillsByAppointmentId(int AppointmentId);
     }
 }
