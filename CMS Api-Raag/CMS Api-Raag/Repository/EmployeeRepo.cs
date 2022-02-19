@@ -94,7 +94,7 @@ namespace CMS_Api_Raag.Repository
             //declare variable
             int result = 0;
             if (_context != null)
-            {                                                                //linq
+            {                                                                
                 var employee = await _context.Employee.FirstOrDefaultAsync(emp => emp.EmployeeId == id);
 
                 //check condition
@@ -123,6 +123,19 @@ namespace CMS_Api_Raag.Repository
 
             }
             return null;
+        }
+        #endregion
+
+
+        #region emp by ph
+        public async Task<IEnumerable<Employee>> GetEmpPh(string ph)
+        {
+            IQueryable<Employee> query = _context.Employee;
+            if (!string.IsNullOrEmpty(ph))
+            {
+                query = query.Where(e => e.PhoneNumber.Contains(ph));
+            }
+            return await query.ToListAsync();
         }
         #endregion
 
@@ -187,7 +200,7 @@ namespace CMS_Api_Raag.Repository
         #endregion
 
 
-        //View All EMployee details
+        //View All Employee details
         #region  GET All employees
         public async Task<List<EmployeeViewModel>> GetAllEmployees()
         {
@@ -217,8 +230,6 @@ namespace CMS_Api_Raag.Repository
             }
             return null;
         }
-
-       
         #endregion
 
 

@@ -176,6 +176,27 @@ namespace CMS_Api_Raag.Controllers
         #endregion
 
 
+        #region Get By phone
+        [HttpGet("{search}/{ph}")]
+        public async Task<ActionResult<IEnumerable<Employee>>> GetEmpPh(string ph)
+        {
+            try
+            {
+                var employee = await _empRepo.GetEmpPh(ph);
+                if (employee == null)
+                {
+                    return NotFound();
+                }
+                return Ok(employee);
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+        }
+        #endregion
+
+
 
         //view Admin details
         #region GETAdmin
