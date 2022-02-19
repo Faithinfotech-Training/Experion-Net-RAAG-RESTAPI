@@ -34,5 +34,9 @@ namespace CMS_Api_Raag.ViewModel
         public DateTime? TokenDate { get; set; }
         public string DoctorName { get; set; }
         public int DoctorId { get; set; }
+
+        public int? DepId { get; set; }
+
+
     }
 }

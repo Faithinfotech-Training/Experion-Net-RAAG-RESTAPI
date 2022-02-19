@@ -1,5 +1,6 @@
 ﻿using CMS_Api_Raag.Models;
 using CMS_Api_Raag.ViewModel;
+using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -57,5 +58,8 @@ namespace CMS_Api_Raag.Repository
         //Task<List<PostViewModel>> GetAllPosts();
 
         //Task<PostViewModel> GetPost(int? postId);
+
+        Task<List<DoctorViewModel>> GetDoctorsByDepId(int DepId);
+
     }
 }
