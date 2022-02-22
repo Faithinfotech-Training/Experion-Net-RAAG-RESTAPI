@@ -126,6 +126,29 @@ namespace CMS_Api_Raag.Controllers
         }
         #endregion
 
+        #region doctor update
+        [HttpPut]
+        [Route("GetDoctor")]
+        public async Task<IActionResult> UpdateDoctor([FromBody] Doctor employee)
+        {
+            //check the validation of body
+            if (ModelState.IsValid)
+            {
+                try
+                {
+                    await _empRepo.UpdateDoctor(employee);
+                    return Ok();
+
+                }
+                catch (Exception)
+                {
+                    return BadRequest();
+                }
+            }
+            return BadRequest();
+        }
+        #endregion
+
 
         //Delete employee Details
         #region Delete Employee             

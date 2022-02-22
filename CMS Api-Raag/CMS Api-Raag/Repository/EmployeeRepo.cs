@@ -86,6 +86,19 @@ namespace CMS_Api_Raag.Repository
         }
         #endregion
 
+        //update doctor
+        #region doctor updates
+        public  async Task UpdateDoctor(Doctor employee)
+        {
+            if (_context != null)
+            {
+                _context.Entry(employee).State = EntityState.Modified;
+                _context.Doctor.Update(employee);
+                await _context.SaveChangesAsync();
+            }
+        }
+        #endregion
+
 
         //Deleting an Employee details
         #region DeleteEmployee
@@ -230,6 +243,8 @@ namespace CMS_Api_Raag.Repository
             }
             return null;
         }
+
+        
         #endregion
 
 

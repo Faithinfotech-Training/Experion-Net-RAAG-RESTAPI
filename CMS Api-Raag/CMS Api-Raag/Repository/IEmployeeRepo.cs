@@ -25,6 +25,9 @@ namespace CMS_Api_Raag.Repository
         //Updating Employee details
         Task UpdateEmployee(Employee employee);
 
+        //update Doctor details
+        Task UpdateDoctor(Doctor employee);
+
         //Deleting an Employee details
         Task<int> DeleteEmployee(int? id);
 
