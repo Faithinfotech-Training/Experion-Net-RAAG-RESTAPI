@@ -1,5 +1,6 @@
 ﻿using CMS_Api_Raag.Models;
 using CMS_Api_Raag.ViewModel;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using System;
 using System.Collections.Generic;
@@ -300,5 +301,31 @@ namespace CMS_Api_Raag.Repository
         //    return await query.ToListAsync();
 
         //}
+
+        #region to view doctors by depid  --VIEWMODEL
+        public async Task<List<DoctorViewModel>> GetDoctorsByDepId(int DepId)
+        {
+            return await
+               (
+                from s in _context.Doctor
+                from e in _context.Employee
+                where
+                (
+                    s.DepId == DepId
+                    && s.EmployeeId == e.EmployeeId
+
+                )
+                select new DoctorViewModel
+                {
+ 
+                    DoctorId = s.DoctorId,
+                    DepId = s.DepId,
+                    DoctorName = e.FirstName
+                }
+                ).ToListAsync();
+        }
+        #endregion
+
+
     }
 }

@@ -10,5 +10,7 @@ namespace CMS_Api_Raag.ViewModel
         public string UserName { get; set; }
         public string Password { get; set; }
         public string RoleName { get; set; }
+        public int EmployeeId { get; set; }
+
     }
 }

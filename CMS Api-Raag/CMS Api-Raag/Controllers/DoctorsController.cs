@@ -1,5 +1,6 @@
 ﻿using CMS_Api_Raag.Models;
 using CMS_Api_Raag.Repository;
+using CMS_Api_Raag.ViewModel;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using System;
@@ -497,6 +498,24 @@ namespace CMS_Api_Raag.Controllers
                 return BadRequest();
             }
         }
+
+
+        #region get doctors by depid --view model
+
+        //Endpoint:
+        [HttpGet("{DepId}")]
+        public async Task<ActionResult<IEnumerable<DoctorViewModel>>> GetDoctorsByDepId(int DepId)
+        {
+            try
+            {
+                return await _docrepo.GetDoctorsByDepId(DepId);
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+        }
+        #endregion
 
     }
 }

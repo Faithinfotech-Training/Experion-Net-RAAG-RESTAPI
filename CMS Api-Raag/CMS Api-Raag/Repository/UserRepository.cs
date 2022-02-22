@@ -65,7 +65,8 @@ namespace CMS_Api_Raag.Repository
                               {
                                   UserName = u.UserName,
                                   Password = u.Password,
-                                  RoleName = r.RoleName
+                                  RoleName = r.RoleName,
+                                  EmployeeId = u.EmployeeId
                               }
                               ).ToListAsync();
             }
