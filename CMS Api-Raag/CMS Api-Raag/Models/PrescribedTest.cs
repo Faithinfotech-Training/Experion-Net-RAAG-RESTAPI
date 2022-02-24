@@ -14,7 +14,7 @@ namespace CMS_Api_Raag.Models
         public int? TestId { get; set; }
         public int? UnitId { get; set; }
         public string NormalRange { get; set; }
-        public decimal Result { get; set; }
+        public decimal? Result { get; set; }
 
         public virtual Test Test { get; set; }
         public virtual TestUnit Unit { get; set; }

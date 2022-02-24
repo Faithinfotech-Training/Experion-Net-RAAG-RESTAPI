@@ -397,6 +397,38 @@ namespace CMS_Api_Raag.Controllers
             return BadRequest();
         }
 
+        [HttpPost]
+        [Route("AddNote")]
+        public async Task<IActionResult> AddNote([FromBody] DoctorNotes note)
+        {
+            //check the validation of body
+            if (ModelState.IsValid)
+
+            {
+                try
+                {
+                    var Id = await _docrepo.AddNotes(note);
+                    if (Id > 0)
+                    {
+                        return Ok(Id);
+
+                    }
+                    else
+                    {
+                        return NotFound();
+                    }
+                }
+                catch (Exception)
+                {
+                    return BadRequest();
+                }
+
+
+            }
+            return BadRequest();
+        }
+
+
         [HttpGet]
         [Route("Gettest")]
         public async Task<ActionResult<IEnumerable<PrescribedTest>>> Gettest()
@@ -481,12 +513,12 @@ namespace CMS_Api_Raag.Controllers
 
 
         [HttpGet]
-        [Route("GetAllAppoinment")]
-        public async Task<IActionResult> GetAllAppoinment()
+        [Route("GetAllAppoinment/{id}")]
+        public async Task<IActionResult> GetAllAppoinment(int id)
         {
             try
             {
-                var users = await _docrepo.GetAllAppointments();
+                var users = await _docrepo.GetAllAppointments(id);
                 if (users == null)
                 {
                     return NotFound();

@@ -182,7 +182,7 @@ namespace CMS_Api_Raag.Repository
             return null;
         }
 
-        public async Task<List<DoctorViewModel>> GetAllAppointments()
+        public async Task<List<DoctorViewModel>> GetAllAppointments(int id)
         {
             if (_context != null)
             {
@@ -193,8 +193,8 @@ namespace CMS_Api_Raag.Repository
                               from s in _context.Token
                               from h in _context.Doctor
                               from e in _context.Employee
-                              where u.PatientId == r.PatientId && s.DoctorId == h.DoctorId 
-                              && r.AppointmentId == s.AppointmentId && e.EmployeeId == h.EmployeeId
+                              where u.PatientId == r.PatientId && s.DoctorId == h.DoctorId && e.EmployeeId ==id
+                              && r.AppointmentId == s.AppointmentId && e.EmployeeId == h.EmployeeId &&s.TokenDate == DateTime.Today
                               select new DoctorViewModel
                               {
                                   AppoinmentId = r.AppointmentId,
@@ -325,6 +325,17 @@ namespace CMS_Api_Raag.Repository
                 ).ToListAsync();
         }
         #endregion
+        public async Task<int> AddNotes(DoctorNotes note)
+        {
+            if (_context != null)
+            {
+                await _context.DoctorNotes.AddAsync(note);
+                await _context.SaveChangesAsync();
+                return note.DnId;
+            }
+            return 0;
+        }
+       
 
 
     }

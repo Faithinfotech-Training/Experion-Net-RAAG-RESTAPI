@@ -69,7 +69,7 @@ namespace CMS_Api_Raag.Repository
                 PrescribedTestId = PT.Ptid,
                 UnitId = (int)PT.UnitId,
                 Testname = T.TestName,
-                Testvalue = PT.Result,
+                Testvalue = (Decimal)PT.Result,
                 Normalrange = PT.NormalRange,
                 Unit = U.Unit,
                 Price = T.TestCost
