@@ -8,6 +8,7 @@ namespace CMS_Api_Raag.Models
         public Appoinment()
         {
             ConsultationBillDetails = new HashSet<ConsultationBillDetails>();
+            DoctorNotes = new HashSet<DoctorNotes>();
             MedicineBill = new HashSet<MedicineBill>();
             Prescription = new HashSet<Prescription>();
             TestBill = new HashSet<TestBill>();
@@ -22,6 +23,7 @@ namespace CMS_Api_Raag.Models
         public virtual Employee Employee { get; set; }
         public virtual Patient Patient { get; set; }
         public virtual ICollection<ConsultationBillDetails> ConsultationBillDetails { get; set; }
+        public virtual ICollection<DoctorNotes> DoctorNotes { get; set; }
         public virtual ICollection<MedicineBill> MedicineBill { get; set; }
         public virtual ICollection<Prescription> Prescription { get; set; }
         public virtual ICollection<TestBill> TestBill { get; set; }

@@ -51,9 +51,9 @@ namespace CMS_Api_Raag.Repository
 
         Task<List<PrescribedTest>> Gettest();
 
-        Task<List<DoctorViewModel>> GetAllAppointments();
+        Task<List<DoctorViewModel>> GetAllAppointments(int id);
 
-
+        Task<int> AddNotes(DoctorNotes note);
 
         //Task<List<PostViewModel>> GetAllPosts();
 
