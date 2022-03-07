@@ -50,7 +50,7 @@ namespace CMS_Api_Raag.Controllers
                 {
                     var tokens = new JwtSecurityTokenHandler().WriteToken(token);
                     var emp = await _userRepository.GetUserByNameandPasswords(name, password);
-                    response = Ok(new { token = tokens, UserName = emp.UserName, Password = emp.Password, RoleId = emp.RoleId,EmployeeId = emp.EmployeeId });
+                    response = Ok(new { token = tokens, UserName = emp.UserName, Password = emp.Password, RoleId = emp.RoleId,EmployeeId = emp.EmployeeId, EmployeeStatus =emp.EmployeeStatus});
                     return response;
                 }
                 catch (Exception)

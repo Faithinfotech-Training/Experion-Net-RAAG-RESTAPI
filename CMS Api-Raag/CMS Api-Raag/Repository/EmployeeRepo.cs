@@ -152,6 +152,18 @@ namespace CMS_Api_Raag.Repository
         }
         #endregion
 
+        #region emp by username
+        public  async Task<IEnumerable<Employee>> GetEmpUname(string uName)
+        {
+            IQueryable<Employee> query = _context.Employee;
+            if (!string.IsNullOrEmpty(uName))
+            {
+                query = query.Where(e => e.UserName.Contains(uName));
+            }
+            return await query.ToListAsync();
+        }
+        #endregion
+
 
         //view Admin details
         #region admin details
@@ -243,8 +255,6 @@ namespace CMS_Api_Raag.Repository
             }
             return null;
         }
-
-        
         #endregion
 
 

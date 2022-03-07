@@ -219,7 +219,25 @@ namespace CMS_Api_Raag.Controllers
         }
         #endregion
 
-
+        #region Get By User Name
+        [HttpGet("{search}/{empuname}/{uName}")]
+        public async Task<ActionResult<IEnumerable<Employee>>> GetEmpUname(string uName)
+        {
+            try
+            {
+                var staff = await _empRepo.GetEmpUname(uName);
+                if (staff == null)
+                {
+                    return NotFound();
+                }
+                return Ok(staff);
+            }
+            catch (Exception)
+            {
+                return BadRequest();
+            }
+        }
+        #endregion
 
         //view Admin details
         #region GETAdmin

@@ -10,7 +10,7 @@ namespace CMS_Api_Raag.ViewModel
         public int MedicineId { get; set; }
         public string MedicineName { get; set; }
         public int StockQuantity { get; set; }
-        public int UnitPrice { get; set; }
+        public decimal UnitPrice { get; set; }
         public DateTime ExpiryDate { get; set; }
         public int? AdminId { get; set; }
     }

@@ -37,6 +37,9 @@ namespace CMS_Api_Raag.Repository
         //find employee by phone number   
         Task<IEnumerable<Employee>> GetEmpPh(string ph);
 
+        //find employee by User Name   
+        Task<IEnumerable<Employee>> GetEmpUname(string uName);
+
 
         //view Admin details ----ViewModel
         Task<List<AdminViewModel>> GetAdmins();
